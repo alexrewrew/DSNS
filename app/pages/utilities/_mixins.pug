@@ -1,0 +1,11 @@
+// links
+mixin link(href, className, name, target)
+    a(href= href, class= className, title='', alt='', target= target)= name
+
+// images
+mixin img(src, className, error)
+    img(src= src, class= className, title='', alt='', onerror=error)
+
+// input
+mixin input(type, placeholder)
+    input(type= type, placeholder= placeholder)
