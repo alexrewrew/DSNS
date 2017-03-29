@@ -9,10 +9,10 @@ html
 
     body
         include ../partials/_navigation.pug
+        include ../partials/_header.pug
 
-        main
-            include ../partials/_header.pug
+        block content
 
-            block content
+        include ../partials/_footer.pug
 
-            include ../partials/_footer.pug
+        script(type="text/javascript" src="js/main.js")

@@ -1,1 +1,22 @@
 nav
+    .container
+        .row
+            .col-md-4
+                ul.menu.menu-left
+                    li
+                        +link2('#link-first', 'Для чого')
+                    li
+                        +link2('#link-second', 'Як працює')
+                    li
+                        +link2('#link-third', 'Досвід')
+            .col-md-4
+                a(href='index.html' title='' class='logo-big')
+                    +img('img/logo/logo-big.svg', '', "this.src='img/logo/logo-big.png'")
+            .col-md-4
+                ul.menu.menu-right
+                    li
+                        +link2('#link-fourth', 'Анкета')
+                    li
+                        +link2('#link-fifth', 'Тренування')
+                    li
+                        +link2('#link-sixth', 'Контакти')

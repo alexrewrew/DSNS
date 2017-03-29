@@ -2,7 +2,84 @@
 @import '../../utilities/mixins'
 
 ul
-  li
+  padding 0
+  margin 0
 
 ol
+  padding 0
+  margin 0
+  counter-reset: item;
+  list-style: none
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  justify-content space-around
+  padding: 17px 13px 109px 88px
   li
+    counter-increment: item;
+    margin-bottom: 5px;
+    position relative
+    flex 1 1 33.33333%
+    max-width 33.33333%
+    padding-left 64px
+    padding-top 28px
+    padding-right 60px
+    line-height: 1.75
+    &:before
+      margin-right: 10px
+      content: counter(item)
+      color $white
+      text-align: center
+      display block
+      font-size 6.25em
+      font-weight 600
+      position absolute
+      top 0
+      line-height .8
+      left 0
+    &:after
+      pseudo(block, absolute)
+      background $red-a
+      height 4px
+      width 30px
+      top 3px
+      left 65px
+
+.nav-tabs
+  border 0
+  margin 0 auto
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  justify-content space-around
+  padding: 0 62px;
+
+.nav-tabs > li > a, .nav-tabs > li.active > a
+  border 0
+  width 120px
+  border-radius 0
+  margin 0
+  text-align center
+  font-size 1.750em
+  padding 4px 0
+  &:hover
+    border 0
+  &:focus
+    border 0
+
+.nav-tabs > li > a
+  background $white
+  color $red-b
+  &:hover
+    background $red-b
+    color $white
+  &:focus
+    background $red-b
+    color $white
+
+.nav-tabs > li.active > a
+  background $red-b
+  color $white
+  &:focus
+    background $red-b
+    color $white

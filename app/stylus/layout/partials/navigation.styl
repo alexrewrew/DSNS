@@ -2,4 +2,40 @@
 @import '../../utilities/mixins'
 
 /* NAVIGATION */
-nav {}
+nav
+  background $red-a
+  max-height 80px
+  position fixed
+  top 0
+  right 0
+  left 0
+  z-index 10
+
+.menu
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  padding 21px 0 26px
+  justify-content space-between
+  li
+    list-style none
+    a
+      display block
+      padding 6px 0
+      border-bottom 2px solid transparent
+      &:hover
+        border-color $white
+    a.active
+      border-color $white
+
+.menu-left
+  margin-right 50px
+.menu-right
+  margin-left 50px
+
+.logo-big
+  text-align center
+  display block
+  padding 11px 0 9px
+  &:hover
+    opacity .6

@@ -1,10 +1,17 @@
 // links
 mixin link(href, className, name, target)
-    a(href= href, class= className, title='', alt='', target= target)= name
+    a(href= href, class= className, title='', target= target)= name
+
+mixin link2(href, name)
+    a(href= href, title='')= name
 
 // images
 mixin img(src, className, error)
     img(src= src, class= className, title='', alt='', onerror=error)
+
+// images
+mixin img2(src)
+    img(src= src, title='', alt='')
 
 // input
 mixin input(type, placeholder)

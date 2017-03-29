@@ -2,10 +2,114 @@
 extend layouts/_layout.pug
 
 block title
-    | Главная страница
+    | ДСНС. Добровольці-вогнеборці
 
 block content
 
-    .container
+    section.container#link-first
         .row
             .col-12
+                h2 Для чого?
+                .block-white
+                    p
+                        | Реформа потрібна для зниження рівеня смертності та матеріальних збитків від пожеж. Своєчасне реагування на пожежі в сільській місцевості, зменшити до мінімуму час прибуття допомоги. Професійне реагування громадян. Самодопомога. Мета реформи донесті до свідомості громадян рівень небезпеки
+                        br
+                        |  та можливості її усунення.
+                    img(src='../img/pieces/sector1.png' class='piece')
+                    img(src='../img/pieces/car.png' class='car')
+
+    section.container#link-second
+        .row
+            .col-12
+                h2 Як це працює?
+            .col-12
+                ol
+                    li Вдосконалення системи реагування підрозділів ДСНС
+                    li Розширення мережі місцевих пожежних команд
+                    li Залучення добровольців до забезпечення пожежної охорони
+            .col-12
+                .block-white.house
+                    p
+                        | З отриманням інформації про пожежу добровольці-пожежники прибувають на місце події та спільно з місцевою пожежною командою здійснюють гасіння пожежі. Час оперативного реагування зменшується, а ефективність збільшується.
+                    img(src='../img/pieces/sector1.png' class='piece')
+                    img(src='../img/pieces/house.png' class='house')
+
+    section#link-third
+        h2 Досвід інших країн
+        .carousel
+            .item
+                +img2('')
+
+        div
+            .tab-content
+                #usa.tab-pane.active(role='tabpanel') ...1
+                #aut.tab-pane(role='tabpanel') ...2
+                #ger.tab-pane(role='tabpanel') ...3
+                #swe.tab-pane(role='tabpanel') ...4
+                #chl.tab-pane(role='tabpanel') ...5
+            // Nav tabs
+        .container
+            .row
+                .offset-1.col-10
+                    ul.nav.nav-tabs(role='tablist')
+                        li.active(role='presentation')
+                            a(href='#usa', aria-controls='home', role='tab', data-toggle='tab') USA
+                        li(role='presentation')
+                            a(href='#aut', aria-controls='profile', role='tab', data-toggle='tab') AUT
+                        li(role='presentation')
+                            a(href='#ger', aria-controls='messages', role='tab', data-toggle='tab') GER
+                        li(role='presentation')
+                            a(href='#swe', aria-controls='settings', role='tab', data-toggle='tab') SWE
+                        li(role='presentation')
+                            a(href='#chl', aria-controls='settings', role='tab', data-toggle='tab') CHL
+
+
+    section.container#link-fourth
+        .row
+            .col-12
+                h2 ХТО МОЖЕ БУТИ ДОБРОВОЛЬЦЕМ?
+                .block-white
+                    .row
+                        .col-md-6
+                            +img2('')
+
+                        .col-md-6
+                            p
+                                | Кожен може стати добровольцем-вогнеборцем, без обмежень по віку та статі. Для гасіння пожеж, доброволець-вогнеборець має відповідати наступним вимогам:
+                            ul
+                                li Вік 21-60
+                                li Без обмежень по статі
+                                li Відсутність медичних протипоказань до фізичної роботи
+            .col-12
+                a(href="#" class="button") Долучитись
+
+    section.container#link-fifth
+        .row
+            .col-12
+                h2 Тренування
+            .col-md-4
+                .video-container
+                    video
+                    p Вдосконалення системи реагування підрозділів ДСНС
+            .col-md-4
+                .video-container
+                    video
+                    p Вдосконалення системи реагування підрозділів ДСНС
+            .col-md-4
+                .video-container
+                    video
+                    p Вдосконалення системи реагування підрозділів ДСНС
+            .col-12
+                a(href="#" class="button") Долучитись
+
+    section.container#link-sixth
+        .row
+            .col-12
+                h2 ЗАЛИШИЛИСЬ ЗАПИТАННЯ?
+                form
+                    input(type='text')
+                    input(type='email')
+                    textarea
+                    button(type='submit' class='button') Відправити
+
+
