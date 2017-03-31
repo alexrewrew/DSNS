@@ -1,27 +1,50 @@
 footer
     .container
         .row
-            .offset-md-2.col-md-5
-                +img2(src='')
+            .col-12
+                h2 Контакти
+            .offset-md-3.col-md-4
+                img(src='img/pieces/sector2.png', title='', alt='', class='sector')
                 p 01601, м. Київ, вул. О. Гончара, 55
                     br
                     a(href='mailto:') oper@mns.gov.ua
-                ul
+                ul.social-links
                     li
-                        +link2('#')
-                            i.fa
+                        a(href='#', title='', target='_blank')
+                            include facebook.html
             .col-md-5
-                ul
+                ul.documents
                     li
-                        a Кодекс вогнеборця
+                        a(href='#', title='', target='_blank')
+                            include list.html
+                            | Кодекс вогнеборця
                     li
-                        a Створити команду
+                        a(href='#', title='', target='_blank')
+                            include team.html
+                            | Створити команду
 
-section.container
+div.container
     .row
         .offset-md-3.col-md-9
-            p Copyright
-                +link2('//dsns.com.ua') dsns.gov.ua
+            p.copyright Copyright
+                a(href='//dsns.com.ua' title='') dsns.gov.ua
 
-
-
+#myModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
+    .modal-dialog(role='document')
+        .modal-content
+            button.close(type='button', data-dismiss='modal', aria-label='Close')
+                span(aria-hidden='true') ×
+            .container
+                .row
+                    .offset-md-1.col-md-10.offset-lg-2.col-lg-8
+                        h2 СТАТИ ДОБРОВОЛЬЦЕМ-ВОГНЕБОРЦЕМ ДУЖЕ ПРОСТО. ДЛЯ ЦЬОГО ПОТРІБНО:
+                    .offset-md-2.col-md-8.offset-lg-3.col-lg-7
+                        ul.fire-list
+                            li Завітати до своєї сільської/селищної/міської ради, щоб дізнатись чи набирає наразі ваша громада добровольців-вогнеборців;
+                            li Заповнити базову анкету;
+                            li Якщо бажаєте займатись пожежогасінням, пройти медогляд і тестування на психологічну стійкість;
+                            li Пройти співбесіду;
+                            li Пройти навчання за зручним графіком;
+                            li Для пожежогасіння отримати професійну форму та страхування життя і здоров’я;
+                        img(src='img/fireman2.png' class='fireman2')
+                        img(src='img/pieces/sector2.png' class='sector2')

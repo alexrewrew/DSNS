@@ -5,8 +5,22 @@ ul
   padding 0
   margin 0
 
+ul.fire-list
+  list-style none
+  max-width 340px
+  li
+    position relative
+    padding-left 36px
+    line-height: 1.75
+    &:before
+      pseudo(block, absolute)
+      left 0
+      top 14px
+      width 18px
+      height 3px
+      background $red-a
+
 ol
-  padding 0
   margin 0
   counter-reset: item;
   list-style: none
@@ -15,6 +29,11 @@ ol
   flex-wrap: wrap
   justify-content space-around
   padding: 17px 13px 109px 88px
+  +portrait()
+    padding-left 35px
+  +mobile()
+    padding-left 0
+    padding-bottom 59px
   li
     counter-increment: item;
     margin-bottom: 5px;
@@ -25,6 +44,12 @@ ol
     padding-top 28px
     padding-right 60px
     line-height: 1.75
+    +portrait()
+      padding-right 0
+    +mobile()
+      flex 1 1 100%
+      max-width 100%
+      margin-bottom 38px
     &:before
       margin-right: 10px
       content: counter(item)
@@ -44,42 +69,3 @@ ol
       width 30px
       top 3px
       left 65px
-
-.nav-tabs
-  border 0
-  margin 0 auto
-  display: flex
-  flex-direction: row
-  flex-wrap: wrap
-  justify-content space-around
-  padding: 0 62px;
-
-.nav-tabs > li > a, .nav-tabs > li.active > a
-  border 0
-  width 120px
-  border-radius 0
-  margin 0
-  text-align center
-  font-size 1.750em
-  padding 4px 0
-  &:hover
-    border 0
-  &:focus
-    border 0
-
-.nav-tabs > li > a
-  background $white
-  color $red-b
-  &:hover
-    background $red-b
-    color $white
-  &:focus
-    background $red-b
-    color $white
-
-.nav-tabs > li.active > a
-  background $red-b
-  color $white
-  &:focus
-    background $red-b
-    color $white

@@ -2,8 +2,9 @@
 mixin link(href, className, name, target)
     a(href= href, class= className, title='', target= target)= name
 
-mixin link2(href, name)
-    a(href= href, title='')= name
+mixin link2(href, name, className)
+    a(href= href, title='' class=className)= name
+
 
 // images
 mixin img(src, className, error)

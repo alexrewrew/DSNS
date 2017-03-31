@@ -1,0 +1,52 @@
+.modal-content
+  box-shadow none
+  border none
+  border-radius 0
+  padding-top 75px
+  padding-bottom 143px
+  h2
+    font-size 1.625em
+  .fire-list
+    max-width 100%
+
+.modal-backdrop.in
+  opacity 0
+
+button.close
+  color $red-a
+  opacity 1
+  position absolute
+  z-index 20
+  top 40px
+  right 40px
+  text-shadow none
+  font-size 35px
+  font-weight 300
+  &:hover
+    color $red-a
+    opacity .5
+
+.modal-dialog
+  +displays()
+    //width: 1072px
+    width calc(100% + 15px)
+  +tablet()
+    //width 872px
+    width calc(100% + 15px)
+  +portrait()
+    //width 632px
+    width calc(100% + 15px)
+
+.sector2
+  position absolute
+  top:12%
+  left -25%
+  +portrait()
+    left -33%
+
+.fireman2
+  position absolute
+  top:12%
+  right -15%
+  +portrait()
+    right -25%

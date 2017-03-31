@@ -4,25 +4,81 @@
 .block-white
   padding 30px
   background $white
-  margin 0 2.9rem
-  padding: 6.500rem 18rem 14.600rem 16rem
+  margin 0 2.9rem 8.825rem
+  padding: 5rem 18rem 14rem 16rem
   position relative
+  +portrait()
+    padding: 6.500rem 9rem 14.600rem 8rem
+  +mobile()
+    margin-left 0
+    margin-right 0
+    padding 45px 25px 270px
   .piece
     position absolute
     top -29px
     right 160px
+    +mobile()
+      width 105px
+      right 20px
   .car
     position absolute
     bottom -36%
     left 24%
+    +portrait()
+      left:8%
+    +mobile()
+      bottom 8%
+      left -40%
+      width 392px
 
 .block-white.house
-  padding: 10.1rem 26rem 22.6rem 25.75rem
+  padding: 8.3rem 26rem 22rem 25.75rem
+  +portrait()
+    padding: 10.1rem 13rem 11rem 13rem
+  +mobile()
+    padding 45px 25px 200px
+    margin-bottom 0
   .piece
     position absolute
     top -29px
     left 160px
+    +mobile()
+      left 20px
   .house
     position absolute
     bottom: -8.5%
     left: 5.8%
+    +tablet()
+      left -4.2%
+    +portrait()
+      width 100%
+    +mobile()
+      width 600px
+      left -107%
+      bottom -4%
+
+.block-white.fire
+  padding: 5rem 18rem 10rem 12rem
+  p
+    margin-bottom  10px
+  +portrait()
+    padding: 6.500rem 9rem 10rem 6rem
+  +mobile()
+    padding 30px 25px 70px
+    margin-bottom 20px
+  .sector3
+    position absolute
+    top calc(50% - 72px)
+    right -18px
+  .fireman
+    position absolute
+    top 18px
+    left 56px
+    +tablet()
+      left: auto
+    +portrait()
+      left: auto
+    +mobile()
+      position static
+      display block
+      margin 0 auto

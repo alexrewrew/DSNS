@@ -10,6 +10,21 @@ nav
   right 0
   left 0
   z-index 10
+  +portrait()
+    max-height 76px
+  +mobile()
+    max-height 58px
+  .container
+    +portrait()
+      width 100%
+
+.nav-panel
+  +mobile()
+    background $red-a
+    position: relative
+    display none
+    height 100vh
+    padding-top 50px
 
 .menu
   display: flex
@@ -17,25 +32,122 @@ nav
   flex-wrap: wrap
   padding 21px 0 26px
   justify-content space-between
+  +portrait()
+    padding: 21px 0 22px
+  +mobile()
+    padding 0
   li
     list-style none
+    +mobile()
+      flex 1 1 100%
+      max-width 100%
+      margin-bottom 15px
     a
       display block
       padding 6px 0
       border-bottom 2px solid transparent
+      +mobile()
+        color $white
+        text-align center
+        font-size 1.625em
       &:hover
         border-color $white
     a.active
-      border-color $white
+      border-bottom 2px solid $white
+      color $white
 
 .menu-left
   margin-right 50px
+  +portrait()
+    margin 0
+  +mobile()
+    margin 0
 .menu-right
   margin-left 50px
+  +portrait()
+    margin 0
+  +mobile()
+    margin 0
 
 .logo-big
   text-align center
   display block
   padding 11px 0 9px
+  +portrait()
+    padding-top 18px
+  +mobile()
+    display none
+  img
+    +tablet()
+      width 100%
+    +portrait()
+      width 100%
   &:hover
     opacity .6
+
+.logo-small
+  display block
+  padding 9px 0
+
+.nav-mobile
+  display none
+  +mobile()
+    display block
+
+//
+
+#nav-icon4 {
+  margin 18px 0
+  width: 35px;
+  height: 22px;
+  position: relative;
+  transform: rotate(0deg)
+  transition: .5s ease-in-out;
+  cursor: pointer;
+  float right
+}
+
+#nav-icon4 span {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: $white
+  border-radius: 9px;
+  opacity: 1;
+  left: 0
+  transform: rotate(0deg)
+  transition: .25s ease-in-out;
+}
+
+#nav-icon4 span:nth-child(1) {
+  top: 0px
+  transform-origin: left center;
+}
+
+#nav-icon4 span:nth-child(2) {
+  top: 10px
+  transform-origin: left center;
+}
+
+#nav-icon4 span:nth-child(3) {
+  top: 20px
+  transform-origin: left center;
+}
+
+#nav-icon4.open span:nth-child(1) {
+  transform: rotate(45deg);
+  top: -3px;
+  left: 8px;
+}
+
+#nav-icon4.open span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+#nav-icon4.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 22px;
+  left: 8px;
+}

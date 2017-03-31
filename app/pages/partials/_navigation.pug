@@ -1,22 +1,33 @@
 nav
-    .container
+    .container.nav-mobile
+        .row
+            .col-6
+                a(href='index.html' title='' class='logo-small')
+                    +img('img/logo/logo-small.svg', '', "this.src='img/logo/logo-small.png'")
+            .col-6
+                #nav-icon4
+                    span
+                    span
+                    span
+
+    .container.nav-panel
         .row
             .col-md-4
                 ul.menu.menu-left
                     li
-                        +link2('#link-first', 'Для чого')
+                        +link2('#link-first', 'Для чого', 'smooth')
                     li
-                        +link2('#link-second', 'Як працює')
+                        +link2('#link-second', 'Як працює', 'smooth')
                     li
-                        +link2('#link-third', 'Досвід')
+                        +link2('#link-third', 'Досвід', 'smooth')
             .col-md-4
                 a(href='index.html' title='' class='logo-big')
                     +img('img/logo/logo-big.svg', '', "this.src='img/logo/logo-big.png'")
             .col-md-4
                 ul.menu.menu-right
                     li
-                        +link2('#link-fourth', 'Анкета')
+                        +link2('#link-fourth', 'Анкета', 'smooth')
                     li
-                        +link2('#link-fifth', 'Тренування')
+                        +link2('#link-fifth', 'Тренування', 'smooth')
                     li
-                        +link2('#link-sixth', 'Контакти')
+                        +link2('#link-sixth', 'Контакти', 'smooth')

@@ -36,21 +36,63 @@ block content
 
     section#link-third
         h2 Досвід інших країн
-        .carousel
-            .item
-                +img2('')
 
-        div
-            .tab-content
-                #usa.tab-pane.active(role='tabpanel') ...1
-                #aut.tab-pane(role='tabpanel') ...2
-                #ger.tab-pane(role='tabpanel') ...3
-                #swe.tab-pane(role='tabpanel') ...4
-                #chl.tab-pane(role='tabpanel') ...5
+        .tab-content
+            .container
+                .row
+                    .col-12
+                        a.arrow-left(href='#' title='')
+                        a.arrow-right(href='#' title='')
+
+            #usa.tab-pane.active(role='tabpanel')
+                .container
+                    .row
+                        .offset-md-2.col-md-7.offset-lg-2.col-lg-5
+                            h3 США
+                            p
+                                | Добровольці-вогнеборці ефективно допомагають в багатьох країнах світу.
+                                br
+                                | 72% - саме така кількість добровольців-вогнеборців на службі пожежної охорони США.
+            #aut.tab-pane(role='tabpanel')
+                .container
+                    .row
+                        .offset-md-2.col-md-7.offset-lg-2.col-lg-5
+                            h3 Австрія
+                            p
+                                | Добровольці-вогнеборці ефективно допомагають в багатьох країнах світу.
+                                br
+                                | 72% - саме така кількість добровольців-вогнеборців на службі пожежної охорони США.
+            #ger.tab-pane(role='tabpanel')
+                .container
+                    .row
+                        .offset-md-2.col-md-7.offset-lg-2.col-lg-5
+                            h3 Німеччина
+                            p
+                                | Добровольці-вогнеборці ефективно допомагають в багатьох країнах світу.
+                                br
+                                | 72% - саме така кількість добровольців-вогнеборців на службі пожежної охорони США.
+            #swe.tab-pane(role='tabpanel')
+                .container
+                    .row
+                        .offset-md-2.col-md-7.offset-lg-2.col-lg-5
+                            h3 Швеція
+                            p
+                                | Добровольці-вогнеборці ефективно допомагають в багатьох країнах світу.
+                                br
+                                | 72% - саме така кількість добровольців-вогнеборців на службі пожежної охорони США.
+            #chl.tab-pane(role='tabpanel')
+                .container
+                    .row
+                        .offset-md-2.col-md-7.offset-lg-2.col-lg-5
+                            h3 Китай
+                            p
+                                | Добровольці-вогнеборці ефективно допомагають в багатьох країнах світу.
+                                br
+                                | 72% - саме така кількість добровольців-вогнеборців на службі пожежної охорони США.
             // Nav tabs
         .container
             .row
-                .offset-1.col-10
+                .offset-md-1.col-md-10
                     ul.nav.nav-tabs(role='tablist')
                         li.active(role='presentation')
                             a(href='#usa', aria-controls='home', role='tab', data-toggle='tab') USA
@@ -68,48 +110,62 @@ block content
         .row
             .col-12
                 h2 ХТО МОЖЕ БУТИ ДОБРОВОЛЬЦЕМ?
-                .block-white
+                .block-white.fire
+                    img(src='../img/pieces/sector3.png' class='sector3')
                     .row
-                        .col-md-6
-                            +img2('')
+                        .col-md-5
+                            +img('img/fireman.png', 'fireman')
 
-                        .col-md-6
+                        .col-md-7
                             p
                                 | Кожен може стати добровольцем-вогнеборцем, без обмежень по віку та статі. Для гасіння пожеж, доброволець-вогнеборець має відповідати наступним вимогам:
-                            ul
+                            ul.fire-list
                                 li Вік 21-60
                                 li Без обмежень по статі
                                 li Відсутність медичних протипоказань до фізичної роботи
             .col-12
-                a(href="#" class="button") Долучитись
+                a(href="#" class="button" data-toggle="modal" data-target="#myModal") Долучитись
 
     section.container#link-fifth
         .row
             .col-12
                 h2 Тренування
             .col-md-4
-                .video-container
-                    video
+                .video-container.small
+                    .video
+                        iframe(src='https://www.youtube.com/embed/b0dK0asapBM?rel=0&controls=0&showinfo=0', frameborder='0', allowfullscreen='')
+                        include partials/play.html
+                        img(src='img/video/video1.png' class='play-cover')
+
                     p Вдосконалення системи реагування підрозділів ДСНС
             .col-md-4
-                .video-container
-                    video
+                .video-container.small
+                    .video
+                        iframe(src='https://www.youtube.com/embed/b0dK0asapBM?rel=0&controls=0&showinfo=0', frameborder='0', allowfullscreen='')
+                        include partials/play.html
+                        img(src='img/video/video2.png' class='play-cover')
+
                     p Вдосконалення системи реагування підрозділів ДСНС
             .col-md-4
-                .video-container
-                    video
+                .video-container.small
+                    .video
+                        iframe(src='https://www.youtube.com/embed/b0dK0asapBM?rel=0&controls=0&showinfo=0', frameborder='0', allowfullscreen='')
+                        include partials/play.html
+                        img(src='img/video/video3.png' class='play-cover')
+
                     p Вдосконалення системи реагування підрозділів ДСНС
+        .row
             .col-12
-                a(href="#" class="button") Долучитись
+                a(href="#" class="button") Показати більше
 
     section.container#link-sixth
         .row
-            .col-12
+            .offset-md-1.col-md-10.offset-lg-2.col-lg-8
                 h2 ЗАЛИШИЛИСЬ ЗАПИТАННЯ?
                 form
-                    input(type='text')
-                    input(type='email')
-                    textarea
+                    input(type='text' placeholder="І'мя")
+                    input(type='email' placeholder='E-mail')
+                    textarea(placeholder='Текст запитання')
                     button(type='submit' class='button') Відправити
 
 

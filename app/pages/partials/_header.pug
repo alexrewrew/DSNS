@@ -1,3 +1,9 @@
 header
-    h1
-        | Дізнавайся про добровольців-вогнеборців
+    .video-container
+        .video
+            iframe(src='https://www.youtube.com/embed/b0dK0asapBM?rel=0&controls=0&showinfo=0', frameborder='0', allowfullscreen='' id='video-header')
+            //img(src='img/pieces/play.png' class='play-button' id='video-header-play')
+            include play.html
+            img(src='img/video/video-head.png' class='play-cover' id='video-header-cover')
+            h1
+                | Дізнавайся про добровольців-вогнеборців
