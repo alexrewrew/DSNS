@@ -13,12 +13,12 @@ $(document).ready(function () {
 
     $(".smooth").click(function (event) {
         event.preventDefault();
-        var id  = $(this).attr('href'),
+        var id = $(this).attr('href'),
             top = $(id).offset().top;
         $('body,html').animate({scrollTop: (top - 100)}, 1500);
     });
 
-    $('#nav-icon4').click(function(){
+    $('#nav-icon4').click(function () {
         $(this).toggleClass('open');
         $('body').toggleClass('modal-open');
         $('.nav-panel').slideToggle();
@@ -26,9 +26,9 @@ $(document).ready(function () {
 
     var menu_selector = ".menu"; // Переменная должна содержать название класса или идентификатора, обертки нашего меню.
 
-    function onScroll(){
+    function onScroll() {
         var scroll_top = $(document).scrollTop();
-        $(menu_selector + " a").each(function(){
+        $(menu_selector + " a").each(function () {
             var hash = $(this).attr("href");
             var target = $(hash);
             if (target.position().top <= (scroll_top + 200) && target.position().top + target.outerHeight() > (scroll_top + 140)) {
@@ -42,7 +42,7 @@ $(document).ready(function () {
 
     $(document).on("scroll", onScroll);
 
-    $(".menu > a").click(function(e){
+    $(".menu > a").click(function (e) {
         e.preventDefault();
 
         $(document).off("scroll");
@@ -53,17 +53,17 @@ $(document).ready(function () {
 
         $("html, body").animate({
             scrollTop: target.offset().top
-        }, 500, function(){
+        }, 500, function () {
             window.location.hash = hash;
             $(document).on("scroll", onScroll);
         });
     });
-    
+
     /*
-    * Experience
-    * block
-    * navs
-    */
+     * Experience
+     * block
+     * navs
+     */
 
     //to left
     $(".exp-left").click(function (e) {
@@ -106,9 +106,9 @@ $(document).ready(function () {
     });
 
     /*
-    * Video from youtube
-    * autoplay
-    */
+     * Video from youtube
+     * autoplay
+     */
 
     $(".svg-play").click(function () {
         var video = $(this).parent().children("iframe");
@@ -119,6 +119,25 @@ $(document).ready(function () {
         //autoplay to video
         var src = video.attr("src");
         video.attr("src", src + "&autoplay=true");
+    });
+
+    /*
+     * scrolling fire - house
+     */
+
+    var house = $('.block-white.house');
+    $(window).scroll(function () {
+        var top = $(this).scrollTop();
+        var houseTop = house.offset().top - 250;
+
+        if (top >= houseTop) {
+            $(".house-fire").addClass("house-fire-animated");
+            $(".car-fire").addClass("car-fire-animated");
+            $(".people1").addClass("people1-animated");
+            $(".people2").addClass("people2-animated");
+            $(".people3").addClass("people3-animated");
+            $(".people4").addClass("people4-animated");
+        }
     });
 });
 

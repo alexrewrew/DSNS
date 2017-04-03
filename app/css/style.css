@@ -5256,16 +5256,16 @@ button.close:hover {
 	        transform-origin: 70px 30px;
 }
 .shadow-fireman {
-	-webkit-animation: fireman-shadow 3s infinite;
-	   -moz-animation: fireman-shadow 3s infinite;
-	     -o-animation: fireman-shadow 3s infinite;
-	        animation: fireman-shadow 3s infinite;
+	-webkit-animation: fireman-shadow 2.5s infinite;
+	   -moz-animation: fireman-shadow 2.5s infinite;
+	     -o-animation: fireman-shadow 2.5s infinite;
+	        animation: fireman-shadow 2.5s infinite;
 }
 .fire-man {
-	-webkit-animation: fire-man 3s infinite;
-	   -moz-animation: fire-man 3s infinite;
-	     -o-animation: fire-man 3s infinite;
-	        animation: fire-man 3s infinite;
+	-webkit-animation: fire-man 2.5s infinite;
+	   -moz-animation: fire-man 2.5s infinite;
+	     -o-animation: fire-man 2.5s infinite;
+	        animation: fire-man 2.5s infinite;
 }
 .house-fire {
 	-webkit-transform: translateX(230px);
@@ -5281,30 +5281,114 @@ button.close:hover {
 	     -o-transform: translateX(-480px);
 	        transform: translateX(-480px);
 }
+.people1 {
+	-webkit-transform: translateX(-700px);
+	   -moz-transform: translateX(-700px);
+	    -ms-transform: translateX(-700px);
+	     -o-transform: translateX(-700px);
+	        transform: translateX(-700px);
+}
+.people2 {
+	-webkit-transform: translateX(-600px);
+	   -moz-transform: translateX(-600px);
+	    -ms-transform: translateX(-600px);
+	     -o-transform: translateX(-600px);
+	        transform: translateX(-600px);
+}
+.people3 {
+	-webkit-transform: translateX(-300px);
+	   -moz-transform: translateX(-300px);
+	    -ms-transform: translateX(-300px);
+	     -o-transform: translateX(-300px);
+	        transform: translateX(-300px);
+}
+.people4 {
+	-webkit-transform: translateX(-150px);
+	   -moz-transform: translateX(-150px);
+	    -ms-transform: translateX(-150px);
+	     -o-transform: translateX(-150px);
+	        transform: translateX(-150px);
+}
+.house-fire-animated {
+	-webkit-animation: house-fire 2s forwards;
+	   -moz-animation: house-fire 2s forwards;
+	     -o-animation: house-fire 2s forwards;
+	        animation: house-fire 2s forwards;
+}
+.car-fire-animated {
+	-webkit-animation: car-fire 2s forwards;
+	   -moz-animation: car-fire 2s forwards;
+	     -o-animation: car-fire 2s forwards;
+	        animation: car-fire 2s forwards;
+}
+.people1-animated, .people2-animated, .people3-animated, .people4-animated {
+	-webkit-animation: people 2s forwards;
+	   -moz-animation: people 2s forwards;
+	     -o-animation: people 2s forwards;
+	        animation: people 2s forwards;
+}
+.fire1 {
+	-webkit-transform-origin: 500px 200px;
+	   -moz-transform-origin: 500px 200px;
+	    -ms-transform-origin: 500px 200px;
+	     -o-transform-origin: 500px 200px;
+	        transform-origin: 500px 200px;
+}
+.fire2 {
+	-webkit-transform-origin: 600px 150px;
+	   -moz-transform-origin: 600px 150px;
+	    -ms-transform-origin: 600px 150px;
+	     -o-transform-origin: 600px 150px;
+	        transform-origin: 600px 150px;
+}
+.fire3 {
+	-webkit-transform: translate(35px 35px);
+	   -moz-transform: translate(35px 35px);
+	    -ms-transform: translate(35px 35px);
+	     -o-transform: translate(35px 35px);
+	        transform: translate(35px 35px);
+	-webkit-transform-origin: 570px 180px;
+	   -moz-transform-origin: 570px 180px;
+	    -ms-transform-origin: 570px 180px;
+	     -o-transform-origin: 570px 180px;
+	        transform-origin: 570px 180px;
+}
+.fire1, .fire3 {
+	-webkit-animation: fire1 .5s infinite;
+	   -moz-animation: fire1 .5s infinite;
+	     -o-animation: fire1 .5s infinite;
+	        animation: fire1 .5s infinite;
+}
+.fire2 {
+	-webkit-animation: fire2 .5s infinite;
+	   -moz-animation: fire2 .5s infinite;
+	     -o-animation: fire2 .5s infinite;
+	        animation: fire2 .5s infinite;
+}
 @-moz-keyframes fireman-shadow {
 	50% {
-		-moz-transform: scale(1.2);
-		     transform: scale(1.2);
+		-moz-transform: scale(1.31);
+		     transform: scale(1.31);
 	}
 }
 @-webkit-keyframes fireman-shadow {
 	50% {
-		-webkit-transform: scale(1.2);
-		        transform: scale(1.2);
+		-webkit-transform: scale(1.31);
+		        transform: scale(1.31);
 	}
 }
 @-o-keyframes fireman-shadow {
 	50% {
-		-o-transform: scale(1.2);
-		   transform: scale(1.2);
+		-o-transform: scale(1.31);
+		   transform: scale(1.31);
 	}
 }
 @keyframes fireman-shadow {
 	50% {
-		-webkit-transform: scale(1.2);
-		   -moz-transform: scale(1.2);
-		     -o-transform: scale(1.2);
-		        transform: scale(1.2);
+		-webkit-transform: scale(1.31);
+		   -moz-transform: scale(1.31);
+		     -o-transform: scale(1.31);
+		        transform: scale(1.31);
 	}
 }
 @-moz-keyframes fire-man {
@@ -5334,25 +5418,25 @@ button.close:hover {
 	}
 }
 @-moz-keyframes house-fire {
-	50%, 100% {
+	40%, 100% {
 		-moz-transform: translateX(0);
 		     transform: translateX(0);
 	}
 }
 @-webkit-keyframes house-fire {
-	50%, 100% {
+	40%, 100% {
 		-webkit-transform: translateX(0);
 		        transform: translateX(0);
 	}
 }
 @-o-keyframes house-fire {
-	50%, 100% {
+	40%, 100% {
 		-o-transform: translateX(0);
 		   transform: translateX(0);
 	}
 }
 @keyframes house-fire {
-	50%, 100% {
+	40%, 100% {
 		-webkit-transform: translateX(0);
 		   -moz-transform: translateX(0);
 		     -o-transform: translateX(0);
@@ -5401,5 +5485,119 @@ button.close:hover {
 		   -moz-transform: translateX(0);
 		     -o-transform: translateX(0);
 		        transform: translateX(0);
+	}
+}
+@-moz-keyframes people {
+	100% {
+		-moz-transform: translateX(0);
+		     transform: translateX(0);
+	}
+}
+@-webkit-keyframes people {
+	100% {
+		-webkit-transform: translateX(0);
+		        transform: translateX(0);
+	}
+}
+@-o-keyframes people {
+	100% {
+		-o-transform: translateX(0);
+		   transform: translateX(0);
+	}
+}
+@keyframes people {
+	100% {
+		-webkit-transform: translateX(0);
+		   -moz-transform: translateX(0);
+		     -o-transform: translateX(0);
+		        transform: translateX(0);
+	}
+}
+@-moz-keyframes fire1 {
+	0%, 100% {
+		-moz-transform: rotate(-.3deg);
+		     transform: rotate(-.3deg);
+	}
+	50% {
+		-moz-transform: rotate(.3deg);
+		     transform: rotate(.3deg);
+	}
+}
+@-webkit-keyframes fire1 {
+	0%, 100% {
+		-webkit-transform: rotate(-.3deg);
+		        transform: rotate(-.3deg);
+	}
+	50% {
+		-webkit-transform: rotate(.3deg);
+		        transform: rotate(.3deg);
+	}
+}
+@-o-keyframes fire1 {
+	0%, 100% {
+		-o-transform: rotate(-.3deg);
+		   transform: rotate(-.3deg);
+	}
+	50% {
+		-o-transform: rotate(.3deg);
+		   transform: rotate(.3deg);
+	}
+}
+@keyframes fire1 {
+	0%, 100% {
+		-webkit-transform: rotate(-.3deg);
+		   -moz-transform: rotate(-.3deg);
+		     -o-transform: rotate(-.3deg);
+		        transform: rotate(-.3deg);
+	}
+	50% {
+		-webkit-transform: rotate(.3deg);
+		   -moz-transform: rotate(.3deg);
+		     -o-transform: rotate(.3deg);
+		        transform: rotate(.3deg);
+	}
+}
+@-moz-keyframes fire2 {
+	0%, 100% {
+		-moz-transform: rotate(.3deg);
+		     transform: rotate(.3deg);
+	}
+	50% {
+		-moz-transform: rotate(-.3deg);
+		     transform: rotate(-.3deg);
+	}
+}
+@-webkit-keyframes fire2 {
+	0%, 100% {
+		-webkit-transform: rotate(.3deg);
+		        transform: rotate(.3deg);
+	}
+	50% {
+		-webkit-transform: rotate(-.3deg);
+		        transform: rotate(-.3deg);
+	}
+}
+@-o-keyframes fire2 {
+	0%, 100% {
+		-o-transform: rotate(.3deg);
+		   transform: rotate(.3deg);
+	}
+	50% {
+		-o-transform: rotate(-.3deg);
+		   transform: rotate(-.3deg);
+	}
+}
+@keyframes fire2 {
+	0%, 100% {
+		-webkit-transform: rotate(.3deg);
+		   -moz-transform: rotate(.3deg);
+		     -o-transform: rotate(.3deg);
+		        transform: rotate(.3deg);
+	}
+	50% {
+		-webkit-transform: rotate(-.3deg);
+		   -moz-transform: rotate(-.3deg);
+		     -o-transform: rotate(-.3deg);
+		        transform: rotate(-.3deg);
 	}
 }
