@@ -120,3 +120,82 @@
   animation: fire2 0.5s infinite;
 }
 
+/*car animation*/
+.car-block {
+  transform translateX(-200%);
+}
+
+@keyframes wheel1 {
+  100% {
+    transform rotate(380deg);
+  }
+}
+
+@keyframes wheel2 {
+  100% {
+    transform rotate(380deg);
+  }
+}
+
+@keyframes wheel3 {
+  100% {
+    transform rotate(380deg);
+  }
+}
+
+@keyframes car {
+  100% {
+    transform translateX(0);
+  }
+}
+
+.wheel1-animated {
+  animation: wheel1 3s forwards;
+}
+
+.wheel2-animated {
+  animation: wheel2 3s forwards;
+}
+
+.wheel3-animated {
+  animation: wheel3 3s forwards;
+}
+
+.car-block-animated {
+  animation: car 3s forwards;
+}
+
+/*smoke animation*/
+.smoke-left {
+  transform translateX(-70%) translateY(50%);
+}
+
+.smoke-right {
+  transform translateX(70%) translateY(50%);
+}
+
+@keyframes smoke-left {
+  80% {
+    transform translate(0);
+  }
+  100% {
+    transform translateX(-70%) translateY(50%);
+  }
+}
+
+@keyframes smoke-right {
+  80% {
+    transform translate(0);
+  }
+  100% {
+    transform translateX(70%) translateY(50%);
+  }
+}
+
+.smoke-left {
+  animation: smoke-left 7s infinite;
+}
+
+.smoke-right {
+  animation: smoke-right 7s infinite;
+}

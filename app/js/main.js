@@ -11685,5 +11685,86 @@ $(document).ready(function () {
             $(".people4").addClass("people4-animated");
         }
     });
+
+    /*
+     * scrolling car
+     */
+    var car = $('.car-wrap');
+    $(window).scroll(function () {
+        var top = $(this).scrollTop();
+        var carTop = car.offset().top - 200;
+
+        if (top >= carTop) {
+            $(".car-block").addClass("car-block-animated");
+            $(".wheel1").addClass("wheel1-animated");
+            $(".wheel2").addClass("wheel2-animated");
+            $(".wheel3").addClass("wheel3-animated");
+        }
+    });
+    
+    /*
+    * sending 
+    * form
+    * to admin
+    */
+    
+    $(".contact-form").submit(function (e) {
+        var send = true, form = $(this);
+        //regexp
+        var r = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+        //name validation
+        if (form.children("input[type='text']").val() == "") {
+            send = false;
+            //error
+        } else {
+            var name = form.children("input[type='text']").val();
+        }
+
+        //email validation
+        if (form.children("input[type='email']").val() == "") {
+            send = false;
+            //error
+        } else if (!r.test(form.children("input[type='email']").val())) {
+            send = false;
+            //error
+        } else {
+            var email = form.children("input[type='email']").val();
+        }
+
+        //question validation
+        if (form.children("textarea").val() == "") {
+            send = false;
+            //error
+        } else {
+            var question = form.children("textarea").val();
+        }
+
+        if (send) {
+            //sending form
+            $.ajax({
+                method: "post",
+                url: "php/send.php",
+                data: {
+                    name: name,
+                    email: email,
+                    question: question
+                },
+                success: function (data) {
+                    if (data == "true") {
+                        //success
+                    } else {
+                        //throw error to user
+                        //error
+                        //throw error to console
+                        console.log(data);
+                    }
+                }
+            });
+        }
+
+        //prevent to sending form
+        e.preventDefault();
+    });
 });
 
