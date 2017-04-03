@@ -5229,7 +5229,7 @@ button.close:hover {
 .block-white.fire .fireman {
 	position: absolute;
 	top: -5px;
-	left: 56px;
+	left: 46px;
 }
 @media (min-width: 992px) and (max-width: 1199px) {
 	.block-white.fire .fireman {
