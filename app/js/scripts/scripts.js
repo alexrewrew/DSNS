@@ -63,7 +63,7 @@ $(document).ready(function () {
 
     $(document).on("scroll", onScroll);
 
-    $("a[href^=#]").click(function(e){
+    $(".menu > a").click(function(e){
         e.preventDefault();
 
         $(document).off("scroll");
