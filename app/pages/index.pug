@@ -32,17 +32,18 @@ block content
                     p
                         | З отриманням інформації про пожежу добровольці-пожежники прибувають на місце події та спільно з місцевою пожежною командою здійснюють гасіння пожежі. Час оперативного реагування зменшується, а ефективність збільшується.
                     img(src='../img/pieces/sector1.png' class='piece')
-                    img(src='../img/pieces/house.png' class='house')
+                    //img(src='../img/pieces/house.png' class='house')
+                    include partials/house.html
 
     section#link-third
         h2 Досвід інших країн
 
-        .tab-content
+        .tab-content.exp-tabs
             .container
                 .row
                     .col-12
-                        a.arrow-left(href='#' title='')
-                        a.arrow-right(href='#' title='')
+                        a.arrow-left.exp-left(href='#' title='')
+                        a.arrow-right.exp-right(href='#' title='')
 
             #usa.tab-pane.active(role='tabpanel')
                 .container
@@ -93,7 +94,7 @@ block content
         .container
             .row
                 .offset-md-1.col-md-10
-                    ul.nav.nav-tabs(role='tablist')
+                    ul.experience.nav.nav-tabs(role='tablist')
                         li.active(role='presentation')
                             a(href='#usa', aria-controls='home', role='tab', data-toggle='tab') USA
                         li(role='presentation')
@@ -114,7 +115,8 @@ block content
                     img(src='../img/pieces/sector3.png' class='sector3')
                     .row
                         .col-md-5
-                            +img('img/fireman.png', 'fireman')
+                            //+img('img/fireman.png', 'fireman')
+                            include partials/fireman.html
 
                         .col-md-7
                             p

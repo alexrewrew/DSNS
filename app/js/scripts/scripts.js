@@ -24,27 +24,6 @@ $(document).ready(function () {
         $('.nav-panel').slideToggle();
     });
 
-//
-    $('#video-header-play').click(function() {
-        var $video = $('#video-header'),
-            src = $video.attr('src');
-        $video.attr('src', src + '&autoplay=1');
-        $('#video-header-play').hide()
-        $('#video-header-cover').hide()
-        $('h1').hide()
-    });
-//
-    
-    $('.play-button').hover(
-        function() {
-            $(this).attr('src', 'img/pieces/play-hover.png')
-        },
-        function() {
-            $(this).attr('src', 'img/pieces/play.png')
-        }
-    )
-
-
     var menu_selector = ".menu"; // Переменная должна содержать название класса или идентификатора, обертки нашего меню.
 
     function onScroll(){
@@ -79,6 +58,67 @@ $(document).ready(function () {
             $(document).on("scroll", onScroll);
         });
     });
+    
+    /*
+    * Experience
+    * block
+    * navs
+    */
 
-})
+    //to left
+    $(".exp-left").click(function (e) {
+        var prev = $(".exp-tabs .tab-pane.active").prev(".tab-pane");
+        var prevLi = $(".experience li.active").prev("li");
+
+        $(".exp-tabs .tab-pane").removeClass("active");
+        $(".experience li").removeClass("active");
+
+        if (prev.html() != undefined) {
+            prev.addClass("active");
+            prevLi.addClass("active");
+        } else {
+            $("#chl").addClass("active");
+            $(".experience li a[href='#chl']").parent().addClass("active");
+        }
+
+        //prevent link to #
+        e.preventDefault();
+    });
+
+    //to right
+    $(".exp-right").click(function (e) {
+        var next = $(".exp-tabs .tab-pane.active").next(".tab-pane");
+        var nextLi = $(".experience li.active").next("li");
+
+        $(".exp-tabs .tab-pane").removeClass("active");
+        $(".experience li").removeClass("active");
+
+        if (next.html() != undefined) {
+            next.addClass("active");
+            nextLi.addClass("active");
+        } else {
+            $("#usa").addClass("active");
+            $(".experience li a[href='#usa']").parent().addClass("active");
+        }
+
+        //prevent link to #
+        e.preventDefault();
+    });
+
+    /*
+    * Video from youtube
+    * autoplay
+    */
+
+    $(".svg-play").click(function () {
+        var video = $(this).parent().children("iframe");
+
+        //hide all from video block
+        $(this).parent().children().not("iframe").hide();
+
+        //autoplay to video
+        var src = video.attr("src");
+        video.attr("src", src + "&autoplay=true");
+    });
+});
 
