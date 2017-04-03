@@ -5228,7 +5228,7 @@ button.close:hover {
 }
 .block-white.fire .fireman {
 	position: absolute;
-	top: 18px;
+	top: -5px;
 	left: 56px;
 }
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -5246,5 +5246,160 @@ button.close:hover {
 		position: static;
 		display: block;
 		margin: 0 auto;
+	}
+}
+.shadow-fireman {
+	-webkit-transform-origin: 70px 30px;
+	   -moz-transform-origin: 70px 30px;
+	    -ms-transform-origin: 70px 30px;
+	     -o-transform-origin: 70px 30px;
+	        transform-origin: 70px 30px;
+}
+.shadow-fireman {
+	-webkit-animation: fireman-shadow 3s infinite;
+	   -moz-animation: fireman-shadow 3s infinite;
+	     -o-animation: fireman-shadow 3s infinite;
+	        animation: fireman-shadow 3s infinite;
+}
+.fire-man {
+	-webkit-animation: fire-man 3s infinite;
+	   -moz-animation: fire-man 3s infinite;
+	     -o-animation: fire-man 3s infinite;
+	        animation: fire-man 3s infinite;
+}
+.house-fire {
+	-webkit-transform: translateX(230px);
+	   -moz-transform: translateX(230px);
+	    -ms-transform: translateX(230px);
+	     -o-transform: translateX(230px);
+	        transform: translateX(230px);
+}
+.car-fire {
+	-webkit-transform: translateX(-480px);
+	   -moz-transform: translateX(-480px);
+	    -ms-transform: translateX(-480px);
+	     -o-transform: translateX(-480px);
+	        transform: translateX(-480px);
+}
+@-moz-keyframes fireman-shadow {
+	50% {
+		-moz-transform: scale(1.2);
+		     transform: scale(1.2);
+	}
+}
+@-webkit-keyframes fireman-shadow {
+	50% {
+		-webkit-transform: scale(1.2);
+		        transform: scale(1.2);
+	}
+}
+@-o-keyframes fireman-shadow {
+	50% {
+		-o-transform: scale(1.2);
+		   transform: scale(1.2);
+	}
+}
+@keyframes fireman-shadow {
+	50% {
+		-webkit-transform: scale(1.2);
+		   -moz-transform: scale(1.2);
+		     -o-transform: scale(1.2);
+		        transform: scale(1.2);
+	}
+}
+@-moz-keyframes fire-man {
+	50% {
+		-moz-transform: translateY(-20px);
+		     transform: translateY(-20px);
+	}
+}
+@-webkit-keyframes fire-man {
+	50% {
+		-webkit-transform: translateY(-20px);
+		        transform: translateY(-20px);
+	}
+}
+@-o-keyframes fire-man {
+	50% {
+		-o-transform: translateY(-20px);
+		   transform: translateY(-20px);
+	}
+}
+@keyframes fire-man {
+	50% {
+		-webkit-transform: translateY(-20px);
+		   -moz-transform: translateY(-20px);
+		     -o-transform: translateY(-20px);
+		        transform: translateY(-20px);
+	}
+}
+@-moz-keyframes house-fire {
+	50%, 100% {
+		-moz-transform: translateX(0);
+		     transform: translateX(0);
+	}
+}
+@-webkit-keyframes house-fire {
+	50%, 100% {
+		-webkit-transform: translateX(0);
+		        transform: translateX(0);
+	}
+}
+@-o-keyframes house-fire {
+	50%, 100% {
+		-o-transform: translateX(0);
+		   transform: translateX(0);
+	}
+}
+@keyframes house-fire {
+	50%, 100% {
+		-webkit-transform: translateX(0);
+		   -moz-transform: translateX(0);
+		     -o-transform: translateX(0);
+		        transform: translateX(0);
+	}
+}
+@-moz-keyframes car-fire {
+	50% {
+		-moz-transform: translateX(-480px);
+		     transform: translateX(-480px);
+	}
+	100% {
+		-moz-transform: translateX(0);
+		     transform: translateX(0);
+	}
+}
+@-webkit-keyframes car-fire {
+	50% {
+		-webkit-transform: translateX(-480px);
+		        transform: translateX(-480px);
+	}
+	100% {
+		-webkit-transform: translateX(0);
+		        transform: translateX(0);
+	}
+}
+@-o-keyframes car-fire {
+	50% {
+		-o-transform: translateX(-480px);
+		   transform: translateX(-480px);
+	}
+	100% {
+		-o-transform: translateX(0);
+		   transform: translateX(0);
+	}
+}
+@keyframes car-fire {
+	50% {
+		-webkit-transform: translateX(-480px);
+		   -moz-transform: translateX(-480px);
+		     -o-transform: translateX(-480px);
+		        transform: translateX(-480px);
+	}
+	100% {
+		-webkit-transform: translateX(0);
+		   -moz-transform: translateX(0);
+		     -o-transform: translateX(0);
+		        transform: translateX(0);
 	}
 }

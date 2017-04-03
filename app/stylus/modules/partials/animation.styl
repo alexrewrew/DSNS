@@ -1,0 +1,57 @@
+/*fireman*/
+@keyframes fireman-shadow {
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes fire-man {
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.shadow-fireman {
+  transform-origin: 70px 30px;
+}
+
+.shadow-fireman {
+  animation: fireman-shadow 3s infinite;
+}
+
+.fire-man {
+  animation: fire-man 3s infinite;
+}
+
+/*house*/
+.house-fire {
+  transform translateX(230px);
+}
+
+.car-fire {
+  transform translateX(-480px);
+}
+
+@keyframes house-fire {
+  50%, 100% {
+    transform translateX(0);
+  }
+}
+
+@keyframes car-fire {
+  50% {
+    transform translateX(-480px);
+  }
+  100% {
+    transform translateX(0);
+  }
+}
+
+//.house-fire-animated {
+//  animation: house-fire 3s forwards;
+//}
+//
+//.car-fire-animated {
+//  animation: car-fire 3s forwards;
+//}
+
