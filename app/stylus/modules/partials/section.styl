@@ -20,16 +20,43 @@
     +mobile()
       width 105px
       right 20px
-  .car
+  //.car
+  //  position absolute
+  //  bottom -36%
+  //  left 24%
+  //  +portrait()
+  //    left:8%
+  //  +mobile()
+  //    bottom 8%
+  //    left -40%
+  //    width 392px
+  .car-block
     position absolute
     bottom -36%
     left 24%
-    +portrait()
-      left:8%
     +mobile()
-      bottom 8%
-      left -40%
-      width 392px
+      bottom: 0%;
+      left: -80%;
+    +portrait()
+      left 10%
+    .car
+      position relative
+      z-index 1
+    .wheel1
+      position absolute
+      left 389px
+      bottom 28px
+      z-index 2
+    .wheel2
+      position absolute
+      left 172px
+      bottom 28px
+      z-index 2
+    .wheel3
+      position absolute
+      left 91px
+      bottom 28px
+      z-index 2
 
 .block-white.house
   padding: 8.3rem 26rem 22rem 25.75rem
@@ -52,6 +79,8 @@
       left -4.2%
     +portrait()
       width 100%
+      bottom -15%
+      left 0
     +mobile()
       width 600px
       left -107%
