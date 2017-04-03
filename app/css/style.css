@@ -4088,12 +4088,12 @@ header {
 }
 @media (min-width: 768px) and (max-width: 991px) {
 	header {
-		min-height: 390px;
+		min-height: 357px;
 	}
 }
 @media (min-width: 992px) and (max-width: 1199px) {
 	header {
-		min-height: 520px;
+		min-height: 477px;
 	}
 }
 header h1 {
@@ -4105,7 +4105,7 @@ header h1 {
 }
 @media (min-width: 768px) and (max-width: 991px) {
 	header h1 {
-		bottom: 8%;
+		bottom: 10%;
 	}
 }
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -4161,11 +4161,6 @@ header .video-container .smoke .smoke-right {
 @media (min-width: 768px) and (max-width: 991px) {
 	header .video-container {
 		min-height: 390px;
-	}
-}
-@media (min-width: 992px) and (max-width: 1199px) {
-	header .video-container {
-		min-height: 520px;
 	}
 }
 @media (max-width: 767px) {
