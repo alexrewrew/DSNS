@@ -3924,6 +3924,8 @@ ul {
 ul.fire-list {
 	list-style: none;
 	max-width: 340px;
+	position: relative;
+	z-index: 3;
 }
 ul.fire-list li {
 	position: relative;
@@ -5077,7 +5079,8 @@ button {
 	max-width: 100%;
 }
 .modal-backdrop.in {
-	opacity: 0;
+	opacity: .3;
+	background: #e81e27;
 }
 button.close {
 	color: #e81e27;
@@ -5096,23 +5099,26 @@ button.close:hover {
 }
 @media (min-width: 1200px) {
 	.modal-dialog {
-		width: -webkit-calc(100% + 15px);
-		width:    -moz-calc(100% + 15px);
-		width:         calc(100% + 15px);
+		width: 1130px;
+		margin-top: 6.7%;
 	}
 }
 @media (min-width: 992px) and (max-width: 1199px) {
 	.modal-dialog {
-		width: -webkit-calc(100% + 15px);
-		width:    -moz-calc(100% + 15px);
-		width:         calc(100% + 15px);
+		width: 930px;
+		margin-top: 7.8%;
 	}
 }
 @media (min-width: 768px) and (max-width: 991px) {
 	.modal-dialog {
-		width: -webkit-calc(100% + 15px);
-		width:    -moz-calc(100% + 15px);
-		width:         calc(100% + 15px);
+		width: 690px;
+		margin-top: 25%;
+	}
+}
+@media (max-width: 767px) {
+	.modal-dialog {
+		width: 100%;
+		margin: 0;
 	}
 }
 .sector2 {
@@ -5128,11 +5134,11 @@ button.close:hover {
 .fireman2 {
 	position: absolute;
 	top: 12%;
-	right: -15%;
+	right: -25%;
 }
 @media (min-width: 768px) and (max-width: 991px) {
 	.fireman2 {
-		right: -25%;
+		right: -30%;
 	}
 }
 .block-white {

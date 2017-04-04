@@ -88,7 +88,7 @@ gulp.task('minify-html', function () {
 
 //img minify
 gulp.task('imagemin', function () {
-    gulp.src('app/img/**!/*')
+    gulp.src('app/img/**/*')
         .pipe(imagemin())
         .pipe(gulp.dest('dist/img'))
 });
@@ -105,8 +105,14 @@ gulp.task('video', function () {
         .pipe(gulp.dest('dist/video'))
 })
 
+//copy php
+gulp.task('php', function () {
+    return gulp.src('app/php/**/*')
+        .pipe(gulp.dest('dist/php'))
+})
+
 //build
-gulp.task('build', ['fonts', 'video', 'imagemin', 'minify-css', 'compress', 'minify-html'], function () {
+gulp.task('build', ['fonts', 'video', 'imagemin', 'minify-css', 'compress', 'minify-html', 'php'], function () {
 });
 
 //watch
