@@ -5432,14 +5432,16 @@ button.close:hover {
 	        animation: wheel3 1s linear infinite;
 }
 .car-block-animated {
-	-webkit-animation: car 3s forwards, car-flow 2s infinite;
-	   -moz-animation: car 3s forwards, car-flow 2s infinite;
-	     -o-animation: car 3s forwards, car-flow 2s infinite;
-	        animation: car 3s forwards, car-flow 2s infinite;
-	-webkit-animation-delay: 0s, 3s;
-	   -moz-animation-delay: 0s, 3s;
-	     -o-animation-delay: 0s, 3s;
-	        animation-delay: 0s, 3s;
+	-webkit-animation: car 3s forwards;
+	   -moz-animation: car 3s forwards;
+	     -o-animation: car 3s forwards;
+	        animation: car 3s forwards;
+}
+.car-animated {
+	-webkit-animation: car-flow .7s infinite;
+	   -moz-animation: car-flow .7s infinite;
+	     -o-animation: car-flow .7s infinite;
+	        animation: car-flow .7s infinite;
 }
 .smoke-left-show {
 	-webkit-animation: smoke-left 2s forwards, smoke-ups-left 2s infinite;
@@ -5815,10 +5817,6 @@ button.close:hover {
 }
 @-moz-keyframes car-flow {
 	0%, 100% {
-		-moz-transform: translateX(0);
-		     transform: translateX(0);
-	}
-	40%, 60% {
 		-moz-transform: translateY(0);
 		     transform: translateY(0);
 	}
@@ -5829,10 +5827,6 @@ button.close:hover {
 }
 @-webkit-keyframes car-flow {
 	0%, 100% {
-		-webkit-transform: translateX(0);
-		        transform: translateX(0);
-	}
-	40%, 60% {
 		-webkit-transform: translateY(0);
 		        transform: translateY(0);
 	}
@@ -5843,10 +5837,6 @@ button.close:hover {
 }
 @-o-keyframes car-flow {
 	0%, 100% {
-		-o-transform: translateX(0);
-		   transform: translateX(0);
-	}
-	40%, 60% {
 		-o-transform: translateY(0);
 		   transform: translateY(0);
 	}
@@ -5857,12 +5847,6 @@ button.close:hover {
 }
 @keyframes car-flow {
 	0%, 100% {
-		-webkit-transform: translateX(0);
-		   -moz-transform: translateX(0);
-		     -o-transform: translateX(0);
-		        transform: translateX(0);
-	}
-	40%, 60% {
 		-webkit-transform: translateY(0);
 		   -moz-transform: translateY(0);
 		     -o-transform: translateY(0);

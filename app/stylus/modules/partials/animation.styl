@@ -151,9 +151,6 @@
 
 @keyframes car-flow {
   0%, 100% {
-    transform translateX(0);
-  }
-  40%, 60% {
     transform translateY(0);
   }
   50% {
@@ -174,8 +171,11 @@
 }
 
 .car-block-animated {
-  animation: car 3s forwards, car-flow 2s infinite;
-  animation-delay 0s, 3s;
+  animation: car 3s forwards;
+}
+
+.car-animated {
+  animation: car-flow 0.7s infinite;
 }
 
 /*smoke animation*/

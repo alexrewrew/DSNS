@@ -11696,6 +11696,7 @@ $(document).ready(function () {
 
         if (top >= carTop) {
             $(".car-block").addClass("car-block-animated");
+            $(".car").addClass("car-animated");
             $(".wheel1").addClass("wheel1-animated");
             $(".wheel2").addClass("wheel2-animated");
             $(".wheel3").addClass("wheel3-animated");
