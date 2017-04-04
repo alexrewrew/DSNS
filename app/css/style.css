@@ -4088,16 +4088,6 @@ header {
 	position: relative;
 	overflow: hidden;
 }
-@media (min-width: 768px) and (max-width: 991px) {
-	header {
-		min-height: 357px;
-	}
-}
-@media (min-width: 992px) and (max-width: 1199px) {
-	header {
-		min-height: 477px;
-	}
-}
 header h1 {
 	position: absolute;
 	left: 0;
@@ -4129,8 +4119,11 @@ header .video-container {
 	width: 100%;
 	height: 100%;
 }
-header .video-container .play-cover {
-	z-index: 3;
+header .video-container .video .play-cover {
+	left: -webkit-calc(50% - 764px);
+	left:    -moz-calc(50% - 764px);
+	left:         calc(50% - 764px);
+	width: auto;
 }
 header .video-container .smoke {
 	position: absolute;
@@ -4152,6 +4145,7 @@ header .video-container .smoke .smoke-left {
 	left: 0;
 	right: 0;
 	z-index: 3;
+	bottom: -20px;
 }
 header .video-container .smoke .smoke-right {
 	position: absolute;
@@ -4159,6 +4153,7 @@ header .video-container .smoke .smoke-right {
 	left: 0;
 	width: 100%;
 	z-index: 4;
+	bottom: -20px;
 }
 @media (min-width: 768px) and (max-width: 991px) {
 	header .video-container {
@@ -4170,15 +4165,6 @@ header .video-container .smoke .smoke-right {
 		min-height: 550px;
 		padding-top: 100%;
 		margin-bottom: 69px;
-	}
-}
-@media (max-width: 767px) {
-	header .video-container .video .play-cover {
-		height: 100%;
-		width: auto;
-		left: -webkit-calc(50% - 542px);
-		left:    -moz-calc(50% - 542px);
-		left:         calc(50% - 542px);
 	}
 }
 nav {
@@ -5112,7 +5098,7 @@ button.close:hover {
 @media (min-width: 768px) and (max-width: 991px) {
 	.modal-dialog {
 		width: 690px;
-		margin-top: 25%;
+		margin-top: 8.9%;
 	}
 }
 @media (max-width: 767px) {
