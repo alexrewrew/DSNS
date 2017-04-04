@@ -101,27 +101,27 @@
     <header>
       <div class="video-container">
         <div class="video">
-          <iframe src="https://www.youtube.com/embed/b0dK0asapBM?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen=""></iframe><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 94.4 94" class="svg-play">
-<style type="text/css">
-	.st0 {
-        fill-rule: evenodd;
-        clip-rule: evenodd;
-        fill: #FFFFFF;
-    }
-</style>
-<g id="Round">
-	<path class="st0" d="M71.3,87.4C64.3,91.6,56,94,47.2,94c-8.8,0-17-2.4-24.1-6.6l7.5-12.6c4.9,2.9,10.5,4.5,16.6,4.5
+          <iframe src="https://www.youtube.com/embed/b0dK0asapBM?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen=""></iframe><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 94.4 94" class="svg-play play-head">
+    <style type="text/css">
+        .st0 {
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: #FFFFFF;
+        }
+    </style>
+    <g id="Round">
+        <path class="st0" d="M71.3,87.4C64.3,91.6,56,94,47.2,94c-8.8,0-17-2.4-24.1-6.6l7.5-12.6c4.9,2.9,10.5,4.5,16.6,4.5
 		c6.1,0,11.8-1.7,16.6-4.6L71.3,87.4z"/>
-	<path class="st0" d="M71.3,6.6l-7.5,12.6c-4.9-2.9-10.5-4.6-16.6-4.6c-6.1,0-11.7,1.7-16.6,4.5L23.1,6.6C30.1,2.4,38.4,0,47.2,0
+        <path class="st0" d="M71.3,6.6l-7.5,12.6c-4.9-2.9-10.5-4.6-16.6-4.6c-6.1,0-11.7,1.7-16.6,4.5L23.1,6.6C30.1,2.4,38.4,0,47.2,0
 		C56,0,64.3,2.4,71.3,6.6"/>
-	<path class="st0" d="M94.3,47c0,8.8-2.4,17-6.6,24l-12.6-7.5c2.9-4.8,4.6-10.5,4.6-16.5c0-6-1.7-11.7-4.6-16.5L87.7,23
+        <path class="st0" d="M94.3,47c0,8.8-2.4,17-6.6,24l-12.6-7.5c2.9-4.8,4.6-10.5,4.6-16.5c0-6-1.7-11.7-4.6-16.5L87.7,23
 		C91.9,30,94.3,38.2,94.3,47"/>
-	<path class="st0" d="M19.3,63.6L6.7,71.1C2.4,64.1,0,55.8,0,47c0-8.8,2.4-17,6.6-24.1l12.7,7.5C16.4,35.3,14.8,41,14.8,47
+        <path class="st0" d="M19.3,63.6L6.7,71.1C2.4,64.1,0,55.8,0,47c0-8.8,2.4-17,6.6-24.1l12.7,7.5C16.4,35.3,14.8,41,14.8,47
 		C14.8,53.1,16.4,58.8,19.3,63.6"/>
-</g>
-<g id="Play">
-	<polygon class="st0" points="65.8,46.7 37.3,67.9 37.3,25.5 	"/>
-</g>
+    </g>
+    <g id="Play">
+        <polygon class="st0" points="65.8,46.7 37.3,67.9 37.3,25.5 	"/>
+    </g>
 </svg><img class="play-cover" src="img/header/cover.png">
           <div class="smoke"><img class="smoke-left" src="img/header/smoke1.png"><img class="smoke-right" src="img/header/smoke2.png"></div>
           <h1>Дізнавайся про добровольців-вогнеборців</h1>
@@ -2137,7 +2137,11 @@
             <input type="text" placeholder="І'мя">
             <input type="email" placeholder="E-mail">
             <textarea placeholder="Текст запитання"></textarea>
-            <button class="button" type="submit">Відправити</button>
+            <div class="col-12 errors-block">
+              <p class="error-form"></p>
+              <p class="success-form"></p>
+            </div>
+            <button class="button button-form" type="submit">Відправити</button>
           </form>
         </div>
       </div>

@@ -155,6 +155,30 @@ $(document).ready(function () {
             $(".wheel3").addClass("wheel3-animated");
         }
     });
+
+    /*
+    * show
+    * hide
+    * smoke head
+    */
+    $(".smoke-left").addClass("smoke-left-show");
+    $(".smoke-right").addClass("smoke-right-show");
+
+    $(".play-head").mouseover(function () {
+        $(".smoke-left").removeClass("smoke-left-show");
+        $(".smoke-right").removeClass("smoke-right-show");
+
+        $(".smoke-left").addClass("smoke-left-hide");
+        $(".smoke-right").addClass("smoke-right-hide");
+    });
+
+    $(".play-head").mouseleave(function () {
+        $(".smoke-left").removeClass("smoke-left-hide");
+        $(".smoke-right").removeClass("smoke-right-hide");
+
+        $(".smoke-left").addClass("smoke-left-show");
+        $(".smoke-right").addClass("smoke-right-show");
+    });
     
     /*
     * sending 
@@ -163,7 +187,7 @@ $(document).ready(function () {
     */
     
     $(".contact-form").submit(function (e) {
-        var send = true, form = $(this);
+        var send = true, form = $(this), error = "";
         //regexp
         var r = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
@@ -171,30 +195,43 @@ $(document).ready(function () {
         if (form.children("input[type='text']").val() == "") {
             send = false;
             //error
+            error = 'Поле "Ім\'я" обов\'язкове для заповнення';
+            form.children("input[type='text']").focus();
         } else {
             var name = form.children("input[type='text']").val();
         }
 
-        //email validation
-        if (form.children("input[type='email']").val() == "") {
-            send = false;
-            //error
-        } else if (!r.test(form.children("input[type='email']").val())) {
-            send = false;
-            //error
-        } else {
-            var email = form.children("input[type='email']").val();
+        if (error == "") {
+            //email validation
+            if (form.children("input[type='email']").val() == "") {
+                send = false;
+                //error
+                error = 'Поле "E-mail" обов\'язкове для заповнення';
+                form.children("input[type='email']").focus();
+            } else if (!r.test(form.children("input[type='email']").val())) {
+                send = false;
+                //error
+                error = 'Невірний формат вводу E-mail';
+                form.children("input[type='email']").focus();
+            } else {
+                var email = form.children("input[type='email']").val();
+            }
         }
 
-        //question validation
-        if (form.children("textarea").val() == "") {
-            send = false;
-            //error
-        } else {
-            var question = form.children("textarea").val();
+        if (error == "") {
+            //question validation
+            if (form.children("textarea").val() == "") {
+                send = false;
+                //error
+                error = 'Поле "Текст запитання" обов\'язкове для заповнення';
+                form.children("textarea").focus();
+            } else {
+                var question = form.children("textarea").val();
+            }
         }
 
         if (send) {
+            $('.button-form').attr("disabled", true);
             //sending form
             $.ajax({
                 method: "post",
@@ -207,14 +244,41 @@ $(document).ready(function () {
                 success: function (data) {
                     if (data == "true") {
                         //success
+                        $(".success-form").html("Повідомлення успішно відправлене");
+                        form.children("textarea").addClass("textarea-with-error");
+                        form.trigger('reset');
+                        setTimeout(function () {
+                            $(".success-form").html("");
+                            form.children("textarea").removeClass("textarea-with-error");
+                        }, 3000);
                     } else {
                         //throw error to user
-                        //error
-                        //throw error to console
-                        console.log(data);
+                        $(".error-form").html("Помилка. Спробуйте пізніше");
+                        form.children("textarea").addClass("textarea-with-error");
+                        setTimeout(function () {
+                            $(".error-form").html("");
+                            form.children("textarea").removeClass("textarea-with-error");
+                        }, 3000);
                     }
+                    $('.button-form').removeAttr("disabled");
+                },
+                error: function (xhr) {
+                    $(".error-form").html("Error: " + xhr.status);
+                    form.children("textarea").addClass("textarea-with-error");
+                    $('.button-form').removeAttr("disabled");
+                    setTimeout(function () {
+                        $(".error-form").html("");
+                        form.children("textarea").removeClass("textarea-with-error");
+                    }, 3000);
                 }
             });
+        } else {
+            $(".error-form").html(error);
+            form.children("textarea").addClass("textarea-with-error");
+            setTimeout(function () {
+                $(".error-form").html("");
+                form.children("textarea").removeClass("textarea-with-error");
+            }, 3000);
         }
 
         //prevent to sending form

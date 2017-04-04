@@ -55,7 +55,7 @@
 }
 
 @keyframes car-fire {
-  50% {
+  20% {
     transform translateX(-480px);
   }
   100% {
@@ -127,19 +127,19 @@
 
 @keyframes wheel1 {
   100% {
-    transform rotate(380deg);
+    transform rotate(360deg);
   }
 }
 
 @keyframes wheel2 {
   100% {
-    transform rotate(380deg);
+    transform rotate(360deg);
   }
 }
 
 @keyframes wheel3 {
   100% {
-    transform rotate(380deg);
+    transform rotate(360deg);
   }
 }
 
@@ -149,53 +149,92 @@
   }
 }
 
+@keyframes car-flow {
+  0%, 100% {
+    transform translateX(0);
+  }
+  40%, 60% {
+    transform translateY(0);
+  }
+  50% {
+    transform translateY(-5px);
+  }
+}
+
 .wheel1-animated {
-  animation: wheel1 3s forwards;
+  animation: wheel1 1s linear infinite;
 }
 
 .wheel2-animated {
-  animation: wheel2 3s forwards;
+  animation: wheel2 1s linear infinite;
 }
 
 .wheel3-animated {
-  animation: wheel3 3s forwards;
+  animation: wheel3 1s linear infinite;
 }
 
 .car-block-animated {
-  animation: car 3s forwards;
+  animation: car 3s forwards, car-flow 2s infinite;
+  animation-delay 0s, 3s;
 }
 
 /*smoke animation*/
-.smoke-left {
-  transform translateX(-70%) translateY(50%);
-}
-
-.smoke-right {
-  transform translateX(70%) translateY(50%);
-}
-
 @keyframes smoke-left {
-  80% {
+  0% {
+    transform translateX(-70%) translateY(50%);
+  }
+  100% {
     transform translate(0);
   }
+}
+
+@keyframes smoke-right {
+  0% {
+    transform translateX(70%) translateY(50%);
+  }
+  100% {
+    transform translate(0);
+  }
+}
+
+@keyframes smoke-left-hide {
   100% {
     transform translateX(-70%) translateY(50%);
   }
 }
 
-@keyframes smoke-right {
-  80% {
-    transform translate(0);
-  }
+@keyframes smoke-right-hide {
   100% {
     transform translateX(70%) translateY(50%);
   }
 }
 
-.smoke-left {
-  animation: smoke-left 7s infinite;
+@keyframes smoke-ups-left {
+  50% {
+    transform translateY(-5px) translateX(-5px);
+  }
 }
 
-.smoke-right {
-  animation: smoke-right 7s infinite;
+@keyframes smoke-ups-right {
+  50% {
+    transform translateY(-5px) translateX(5px);
+  }
+}
+
+.smoke-left-show {
+  animation: smoke-left 2s forwards, smoke-ups-left 2s infinite;
+  animation-delay 0s, 2s;
+}
+
+.smoke-right-show {
+  animation: smoke-right 2s forwards, smoke-ups-right 2s infinite;
+  animation-delay 0s, 2s;
+}
+
+.smoke-left-hide {
+  animation: smoke-left-hide 2s forwards;
+}
+
+.smoke-right-hide {
+  animation: smoke-right-hide 2s forwards;
 }
