@@ -63,7 +63,7 @@
   +portrait()
     padding: 10.1rem 13rem 11rem 13rem
   +mobile()
-    padding 45px 25px 200px
+    padding 45px 25px 180px
     margin-bottom 0
   .piece
     position absolute
@@ -82,9 +82,15 @@
       bottom -15%
       left 0
     +mobile()
-      width 600px
-      left -107%
-      bottom -4%
+      display none
+  .helphouse
+    display none
+    position absolute
+    left:0
+    right:0
+    bottom -20px
+    +mobile()
+      display block
 
 .block-white.fire
   padding: 5rem 18rem 10rem 12rem

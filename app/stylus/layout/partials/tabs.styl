@@ -49,6 +49,10 @@
 .nav-tabs > li.active > a
   background $red-b
   color $white
+  margin-bottom 22px
+  &:hover
+    background $red-b
+    color $white
   &:focus
     background $red-b
     color $white
@@ -87,9 +91,9 @@
     transitions()
   &:hover
     &:before
-      transform translateX(-20px)
-    &:after
       transform translateX(-10px)
+    &:after
+      transform translateX(-5px)
 
 .arrow-right
   position absolute
@@ -112,9 +116,9 @@
     transitions()
   &:hover
     &:before
-      transform translateX(20px)
-    &:after
       transform translateX(10px)
+    &:after
+      transform translateX(5px)
 
 
 #usa
