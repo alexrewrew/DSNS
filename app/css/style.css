@@ -5209,7 +5209,7 @@ button.close:hover {
 .block-white .car-block .car-shadow {
 	position: absolute;
 	left: 7px;
-	bottom: 0;
+	bottom: 5px;
 	z-index: 1;
 }
 .block-white.house {
