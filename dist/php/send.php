@@ -23,8 +23,8 @@ function send_mime_mail($name_from, $email_from, $name_to, $email_to, $data_char
 if(!empty($_POST)){
 	$arUsers = array(
 		array(
-			"NAME"=>"andrey.dubovskiy", // name to
-			"EMAIL"=>"maxkovalburn@gmail.com" //email to
+			"NAME"=>"Vognebortsi", // name to
+			"EMAIL"=>"info@vognebortsi.in.ua" //email to
 		)
 	);
     $message = '';
@@ -33,7 +33,7 @@ if(!empty($_POST)){
 	$message .= "<br><b>Питання:</b> " . $_POST['question'];
 
 	foreach ($arUsers as $Item){
-		if ($r = send_mime_mail("eduhelp.com.ua", "info@eduhelp.com.ua", $Item['NAME'], $Item['EMAIL'], 'utf-8', 'utf-8', "Питання на сайті", $message)) {
+		if ($r = send_mime_mail("vognebortsi.in.ua", "info@vognebortsi.in.ua", $Item['NAME'], $Item['EMAIL'], 'utf-8', 'utf-8', "Питання на сайті", $message)) {
 			echo "true";
 		} else {
 			echo "error";
