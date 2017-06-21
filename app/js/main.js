@@ -11552,8 +11552,8 @@ $(document).ready(function () {
     //responsive scripts
     if (window.matchMedia('(max-width: 767px)').matches) {
         $('.nav-panel a').click(function () {
-            $('.nav-panel').slideUp()
-            $('#nav-icon4').removeClass('open')
+            $('.nav-panel').slideUp();
+            $('#nav-icon4').removeClass('open');
         })
     }
 
