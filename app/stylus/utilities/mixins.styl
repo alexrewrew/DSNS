@@ -59,6 +59,10 @@ mobile()
   @media (max-width: 767px)
     {block}
 
+landscape()
+  @media (max-device-width: 767px) and (orientation: landscape)
+    {block}
+
 portrait()
   @media (min-width: 768px) and (max-width: 991px)
     {block}
@@ -69,6 +73,18 @@ tablet()
 
 displays()
   @media (min-width: 1200px)
+    {block}
+
+custom-min($minwidth)
+  @media (min-width: $minwidth)
+    {block}
+
+custom-max($maxwidth)
+  @media (max-width: $maxwidth)
+    {block}
+
+custom($minwidth, $maxwidth)
+  @media (min-width: $minwidth) and (max-width: $maxwidth)
     {block}
 
 //animations

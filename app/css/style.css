@@ -6390,6 +6390,12 @@ header .video-container .video .play-cover {
 	left:         calc(50% - 764px);
 	width: auto;
 }
+@media (min-width: 1550px) {
+	header .video-container .video .play-cover {
+		left: 0;
+		width: 100%;
+	}
+}
 header .video-container .smoke {
 	position: absolute;
 	bottom: 0;
@@ -6782,6 +6788,11 @@ footer a:hover {
 		padding-bottom: 20px;
 	}
 }
+@media (max-device-width: 767px) and (orientation: landscape) {
+	.documents {
+		padding-top: 20px;
+	}
+}
 .documents li {
 	list-style: none;
 }
@@ -6793,6 +6804,11 @@ footer a:hover {
 	     -o-transition: none;
 	   -moz-transition: none;
 	        transition: none;
+}
+@media (max-device-width: 767px) and (orientation: landscape) {
+	.documents li a {
+		font-size: 1em;
+	}
 }
 .documents li a svg {
 	margin-right: 18px;
@@ -6979,6 +6995,11 @@ button {
 		display: none;
 	}
 }
+@media (max-device-width: 767px) and (orientation: landscape) {
+	.nav-tabs {
+		top: -121px;
+	}
+}
 .nav-tabs > li > a, .nav-tabs > li.active > a {
 	border: 0;
 	-webkit-border-radius: 0;
@@ -7003,6 +7024,11 @@ button {
 @media (max-width: 767px) {
 	.nav-tabs > li > a {
 		width: 130px;
+	}
+}
+@media (max-device-width: 767px) and (orientation: landscape) {
+	.nav-tabs > li > a {
+		width: 105px;
 	}
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -7058,6 +7084,11 @@ button {
 @media (max-width: 767px) {
 	.arrow-left {
 		top: 380px;
+	}
+}
+@media (max-device-width: 767px) and (orientation: landscape) {
+	.arrow-left {
+		top: 320px;
 	}
 }
 .arrow-left:before {
@@ -7117,6 +7148,11 @@ button {
 @media (max-width: 767px) {
 	.arrow-right {
 		top: 380px;
+	}
+}
+@media (max-device-width: 767px) and (orientation: landscape) {
+	.arrow-right {
+		top: 320px;
 	}
 }
 .arrow-right:before {
@@ -7453,6 +7489,11 @@ button.close:hover {
 		left: -80%;
 	}
 }
+@media (max-device-width: 767px) and (orientation: landscape) {
+	.block-white .car-block {
+		left: -30%;
+	}
+}
 @media (min-width: 768px) and (max-width: 991px) {
 	.block-white .car-block {
 		left: 10%;
@@ -7543,6 +7584,13 @@ button.close:hover {
 @media (max-width: 767px) {
 	.block-white.house .helphouse {
 		display: block;
+	}
+}
+@media (max-device-width: 767px) and (orientation: landscape) {
+	.block-white.house .helphouse {
+		width: 70%;
+		left: 10%;
+		bottom: -35px;
 	}
 }
 .block-white.fire {
